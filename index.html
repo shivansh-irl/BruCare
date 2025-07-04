@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws & Play - Your Pet's Paradise</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for cart icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gradient-to-br from-slate-900 to-slate-700 text-gray-100">
+
+    <!-- Header -->
+    <header class="bg-slate-800/80 backdrop-blur-md shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-3xl font-bold text-yellow-400 hover:text-yellow-300 transition-colors page-link">
+                Paws<span class="text-purple-400">&</span>Play
+            </a>
+            <nav class="hidden md:flex space-x-6 items-center nav-menu-desktop">
+                <a href="#home" class="nav-link page-link text-gray-200 hover:text-yellow-400">Home</a>
+                <a href="#clothing" class="nav-link page-link text-gray-200 hover:text-yellow-400">Clothing</a>
+                <a href="#toys" class="nav-link page-link text-gray-200 hover:text-yellow-400">Toys</a>
+                <a href="#food" class="nav-link page-link text-gray-200 hover:text-yellow-400">Food</a>
+                <a href="#accessories" class="nav-link page-link text-gray-200 hover:text-yellow-400">Accessories</a>
+                <a href="#vets" class="nav-link page-link text-gray-200 hover:text-yellow-400">Find a Vet</a>
+            </nav>
+            <!-- Cart Icon -->
+            <div class="flex items-center">
+                <button id="openCartBtn" class="relative text-gray-200 hover:text-yellow-400 transition-colors focus:outline-none mr-4 md:mr-0">
+                    <i class="fas fa-shopping-cart text-2xl"></i>
+                    <span id="cartItemCount" class="absolute -top-2 -right-2 bg-purple-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </button>
+                <!-- Mobile Menu Toggle -->
+                <button class="md:hidden menu-toggle focus:outline-none ml-3">
+                    <svg class="w-6 h-6 text-gray-200" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-nav-menu" class="nav-menu md:hidden">
+            <a href="#home" class="nav-link page-link">Home</a>
+            <a href="#clothing" class="nav-link page-link">Clothing</a>
+            <a href="#toys" class="nav-link page-link">Toys</a>
+            <a href="#food" class="nav-link page-link">Food</a>
+            <a href="#accessories" class="nav-link page-link">Accessories</a>
+            <a href="#vets" class="nav-link page-link">Find a Vet</a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container mx-auto px-4 md:px-6 py-8">
+
+        <!-- Home Section -->
+        <section id="home" class="page-section">
+            <div class="flex flex-col md:flex-row items-center justify-between min-h-[70vh]">
+                <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left hero-text" style="animation-delay: 0.2s;">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        Welcome to <span class="text-yellow-400">Paws & Play</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Everything your furry, feathery, or scaly friend desires, all in one place. Quality products and care for your beloved pets.
+                    </p>
+                    <a href="#clothing" class="btn-primary page-link text-white font-semibold py-3 px-8 rounded-lg shadow-md text-lg">
+                        Shop Collections
+                    </a>
+                </div>
+                <div class="md:w-1/2 hero-image-container flex justify-center" style="animation-delay: 0.4s;">
+                    <img src="images/happy_pets.png" alt="Happy Pets" class="rounded-xl shadow-2xl object-cover" onerror="this.onerror=null;this.src='https://placehold.co/500x400/cccccc/333333?text=Image+Not+Found';" height="433.53" width="346.81">
+                </div>
+            </div>
+             <!-- Quick Links to other sections -->
+            <div class="mt-16 pt-10 border-t border-slate-700">
+                <h2 class="text-3xl font-semibold text-center mb-10 section-title">Explore Our Range</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="#clothing" class="page-link bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-purple-500/30 transition-shadow duration-300 product-card" style="animation-delay: 0.1s;">
+                        <img src="images/pet_apparel_explore.png" alt="Pet Clothing" class="w-full h-40 object-cover rounded-lg mb-4" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/333333?text=Apparel';">
+                        <h3 class="text-xl font-semibold text-yellow-400 mb-2">Pet Clothing</h3>
+                        <p class="text-gray-400 text-sm">Stylish and comfy outfits for every occasion.</p>
+                    </a>
+                    <a href="#toys" class="page-link bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-purple-500/30 transition-shadow duration-300 product-card" style="animation-delay: 0.2s;">
+                        <img src="images/fun_toys_explore.png" alt="Pet Toys" class="w-full h-40 object-cover rounded-lg mb-4" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/333333?text=Toys';">
+                        <h3 class="text-xl font-semibold text-yellow-400 mb-2">Interactive Toys</h3>
+                        <p class="text-gray-400 text-sm">Keep them entertained and active for hours.</p>
+                    </a>
+                    <a href="#food" class="page-link bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-purple-500/30 transition-shadow duration-300 product-card" style="animation-delay: 0.3s;">
+                        <img src="images/nutritious_food_explore.png" alt="Pet Food" class="w-full h-40 object-cover rounded-lg mb-4" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/333333?text=Food';">
+                        <h3 class="text-xl font-semibold text-yellow-400 mb-2">Premium Food</h3>
+                        <p class="text-gray-400 text-sm">Healthy and delicious meals for optimal growth.</p>
+                    </a>
+                    <a href="#accessories" class="page-link bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-purple-500/30 transition-shadow duration-300 product-card" style="animation-delay: 0.4s;">
+                        <img src="images/cool_accessories_explore.png" alt="Pet Accessories" class="w-full h-40 object-cover rounded-lg mb-4" onerror="this.onerror=null;this.src='https://placehold.co/300x200/cccccc/333333?text=Accessories';">
+                        <h3 class="text-xl font-semibold text-yellow-400 mb-2">Essential Accessories</h3>
+                        <p class="text-gray-400 text-sm">Collars, leashes, beds, and much more.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clothing Section -->
+        <section id="clothing" class="page-section">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-4xl font-bold text-center sm:text-left section-title text-yellow-400 flex-grow">Pet Apparel & Fashion</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.1s;" data-product-id="cl001" data-product-name="Cozy Knit Sweater" data-product-price="24.99">
+                    <img src="images/cozy_sweater.png" alt="Pet Sweater" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Sweater';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-purple-300">Cozy Knit Sweater</h3>
+                        <p class="text-gray-400 mb-3">Keep your pet warm and stylish. Various sizes available.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$24.99</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.2s;" data-product-id="cl002" data-product-name="Waterproof Raincoat" data-product-price="29.99">
+                    <img src="images/raincoat.png" alt="Pet Raincoat" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Raincoat';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-purple-300">Waterproof Raincoat</h3>
+                        <p class="text-gray-400 mb-3">Perfect for rainy day walks. Reflective strips for safety.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$29.99</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.3s;" data-product-id="cl003" data-product-name="Stylish Pet Hoodie" data-product-price="22.50">
+                    <img src="images/pet_hoodie.png" alt="Pet Hoodie" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/a78bfa/FFFFFF?text=Pet+Hoodie';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-purple-300">Stylish Pet Hoodie</h3>
+                        <p class="text-gray-400 mb-3">Comfortable and fashionable for cool days.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$22.50</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.4s;" data-product-id="cl004" data-product-name="Cute Pet Bandana" data-product-price="9.99">
+                    <img src="images/pet_bandana.png" alt="Pet Bandana" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/a78bfa/FFFFFF?text=Pet+Bandana';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-purple-300">Cute Pet Bandana</h3>
+                        <p class="text-gray-400 mb-3">Adds a touch of flair to any pet's look.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$9.99</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Toys Section -->
+        <section id="toys" class="page-section">
+             <div class="flex justify-between items-center mb-10">
+                <h2 class="text-4xl font-bold text-center sm:text-left section-title text-yellow-400 flex-grow">Fun & Engaging Pet Toys</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                 <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.1s;" data-product-id="ty001" data-product-name="Durable Chew Bone" data-product-price="12.99">
+                    <img src="images/chew_toy.png" alt="Chew Toy" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Chew+Toy';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-pink-400">Durable Chew Bone</h3>
+                        <p class="text-gray-400 mb-3">Satisfies chewing instincts, promotes dental health.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$12.99</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.2s;" data-product-id="ty002" data-product-name="Interactive Puzzle Feeder" data-product-price="19.50">
+                    <img src="images/puzzle_feeder.png" alt="Puzzle Feeder" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Puzzle';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-pink-400">Interactive Puzzle Feeder</h3>
+                        <p class="text-gray-400 mb-3">Stimulates mind and slows down eating. Great for cats & dogs.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$19.50</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.3s;" data-product-id="ty003" data-product-name="Squeaky Plush Toy" data-product-price="8.75">
+                    <img src="images/squeaky_toy.png" alt="Squeaky Toy" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/f472b6/FFFFFF?text=Squeaky+Toy';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-pink-400">Squeaky Plush Toy</h3>
+                        <p class="text-gray-400 mb-3">Soft, cuddly, and makes an irresistible squeak.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$8.75</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.4s;" data-product-id="ty004" data-product-name="Rope Tug Toy" data-product-price="11.25">
+                    <img src="images/rope_toy.png" alt="Rope Toy" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/f472b6/FFFFFF?text=Rope+Toy';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-pink-400">Rope Tug Toy</h3>
+                        <p class="text-gray-400 mb-3">Great for interactive play and dental health.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$11.25</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Food/Pedigree Section -->
+        <section id="food" class="page-section">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-4xl font-bold text-center sm:text-left section-title text-yellow-400 flex-grow">Nutritious Pet Food & Treats</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.1s;" data-product-id="fd001" data-product-name="Premium Dog Kibble" data-product-price="45.99">
+                    <img src="images/dog_kibble.png" alt="Dog Kibble" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Kibble';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-emerald-400">Premium Dog Kibble</h3>
+                        <p class="text-gray-400 mb-3">Grain-free, high-protein formula for adult dogs.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$45.99 (15lb bag)</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.2s;" data-product-id="fd002" data-product-name="Gourmet Cat Pâté" data-product-price="2.50">
+                    <img src="images/cat_food.png" alt="Cat Food" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Cat+Food';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-emerald-400">Gourmet Cat Pâté</h3>
+                        <p class="text-gray-400 mb-3">Salmon & Tuna recipe, rich in omega fatty acids.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$2.50 per can</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.3s;" data-product-id="fd003" data-product-name="Organic Dog Treats" data-product-price="12.99">
+                    <img src="images/dog_treats.png" alt="Dog Treats" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/10b981/FFFFFF?text=Dog+Treats';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-emerald-400">Organic Dog Treats</h3>
+                        <p class="text-gray-400 mb-3">Peanut butter flavor, perfect for training.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$12.99</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.4s;" data-product-id="fd004" data-product-name="Small Animal Food Mix" data-product-price="15.00">
+                    <img src="images/small_animal_food.png" alt="Small Animal Food" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/10b981/FFFFFF?text=Rabbit+Food';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-emerald-400">Small Animal Food Mix</h3>
+                        <p class="text-gray-400 mb-3">Nutrient-rich blend for rabbits and guinea pigs.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$15.00</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessories Section -->
+        <section id="accessories" class="page-section">
+            <h2 class="text-4xl font-bold mb-10 text-center section-title text-yellow-400">Essential Pet Accessories</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                 <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.1s;" data-product-id="ac001" data-product-name="Reflective Nylon Collar" data-product-price="14.00">
+                    <img src="images/collar.png" alt="Collar" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Collar';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-orange-400">Reflective Nylon Collar</h3>
+                        <p class="text-gray-400 mb-3">Durable and comfortable with safety reflective stitching.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$14.00</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.2s;" data-product-id="ac002" data-product-name="Orthopedic Pet Bed" data-product-price="55.50">
+                    <img src="images/pet_bed.png" alt="Pet Bed" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/cccccc/333333?text=Bed';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-orange-400">Orthopedic Pet Bed</h3>
+                        <p class="text-gray-400 mb-3">Memory foam for maximum comfort and joint support.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$55.50</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.3s;" data-product-id="ac003" data-product-name="Stainless Steel Bowls" data-product-price="18.99">
+                    <img src="images/pet_bowls.png" alt="Pet Bowls" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/f97316/FFFFFF?text=Pet+Bowls';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-orange-400">Stainless Steel Bowls</h3>
+                        <p class="text-gray-400 mb-3">Set of two, non-slip and easy to clean.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$18.99</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card bg-slate-800 rounded-xl shadow-xl overflow-hidden" style="animation-delay: 0.4s;" data-product-id="ac004" data-product-name="Pet Grooming Brush" data-product-price="16.75">
+                    <img src="images/grooming_brush.png" alt="Grooming Brush" class="w-full h-56 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/400x300/f97316/FFFFFF?text=Grooming+Brush';">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-orange-400">Pet Grooming Brush</h3>
+                        <p class="text-gray-400 mb-3">Reduces shedding and keeps coat healthy.</p>
+                        <p class="text-xl font-bold text-yellow-400 mb-4">$16.75</p>
+                        <button class="btn-primary add-to-cart-btn w-full text-white font-semibold py-2 px-4 rounded-lg">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closest Vet Section -->
+        <section id="vets" class="page-section">
+            <h2 class="text-4xl font-bold mb-10 text-center section-title text-yellow-400">Find a Veterinarian Nearby</h2>
+            <div class="max-w-2xl mx-auto bg-slate-800 p-8 rounded-xl shadow-2xl">
+                <p class="text-gray-300 mb-6 text-center">
+                    Enter your location (e.g., City, Zip Code) to find veterinarians in your area.
+                    <br><small>(This is a demo feature. For real vet advice, consult a professional.)</small>
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                    <input type="text" id="locationInput" placeholder="Enter your City or Zip Code" class="flex-grow p-3 rounded-lg bg-slate-700 border border-slate-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none text-gray-100 placeholder-gray-400">
+                    <button id="searchVetBtn" class="btn-secondary text-gray-800 font-semibold py-3 px-6 rounded-lg">Search Vets</button>
+                </div>
+                <div id="vetResults" class="mt-8 space-y-6">
+                    <!-- Vet results will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-700 text-gray-400 py-10 text-center">
+        <div class="container mx-auto px-6">
+            <p class="mb-2">&copy; <span id="currentYear"></span> Paws & Play. All Rights Reserved.</p>
+            <p class="text-sm">Your one-stop shop for happy pets!</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="hover:text-yellow-400 transition-colors">Facebook</a>
+                <a href="#" class="hover:text-yellow-400 transition-colors">Instagram</a>
+                <a href="#" class="hover:text-yellow-400 transition-colors">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content cart-modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-yellow-400">Your Shopping Cart</h3>
+                <span class="close-button" id="closeCartModalBtn">&times;</span>
+            </div>
+            <div id="cartItemsContainer" class="modal-body py-4 max-h-[60vh] overflow-y-auto">
+                <!-- Cart items will be dynamically inserted here -->
+            </div>
+            <div class="modal-footer cart-summary mt-6 pt-4 border-t border-slate-600">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-xl font-semibold text-gray-200">Total:</span>
+                    <span id="cartTotal" class="text-2xl font-bold text-yellow-400">$0.00</span>
+                </div>
+                <div class="flex justify-end space-x-3">
+                    <button id="clearCartBtn" class="btn-secondary bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg">Clear Cart</button>
+                    <button id="checkoutBtn" class="btn-primary py-2 px-6 rounded-lg">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Simple Message Modal (for vet search etc.) -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                 <h3 id="simpleModalTitle" class="modal-title">Notification</h3>
+                 <span class="close-button" onclick="closeSimpleModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessageText" class="text-lg py-4"></p>
+            </div>
+            <div class="modal-footer">
+                 <button onclick="closeSimpleModal()" class="btn-primary py-2 px-6 rounded-lg">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
