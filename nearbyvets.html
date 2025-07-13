@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Vets - BruCare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vets.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1>🐾 BruCare</h1>
+        <div class="mobile-user-avatar">
+            <i class="fas fa-user"></i>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Navigation Placeholder -->
+        <div id="navigation-placeholder"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="greeting">
+                    <h1>🏥 Nearby Veterinarians</h1>
+                    <p>Find trusted veterinary care for your pets</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-calendar-plus"></i>
+                        Book Appointment
+                    </button>
+                </div>
+            </header>
+
+            <!-- Emergency Banner -->
+            <div class="emergency-banner">
+                <div class="emergency-content">
+                    <div class="emergency-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="emergency-text">
+                        <h3>24/7 Emergency Services</h3>
+                        <p>Call (555) 123-VETS for immediate assistance</p>
+                    </div>
+                    <button class="btn">
+                        <i class="fas fa-phone"></i>
+                        Call Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Featured Veterinarians -->
+                <section class="featured-vets">
+                    <h2>Featured Veterinarians</h2>
+                    <div class="vets-grid">
+                        <div class="vet-card">
+                            <div class="vet-image">
+                                <div class="vet-placeholder">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                            </div>
+                            <div class="vet-info">
+                                <h3>Dr. Satyawati Jaiswal</h3>
+                                <p class="specialty">General Practice</p>
+                                <div class="vet-meta">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>5.0 (127 reviews)</span>
+                                    </div>
+                                    <div class="distance">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>2.3 miles away</span>
+                                    </div>
+                                </div>
+                                <div class="vet-actions">
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-calendar-plus"></i>
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="vet-card">
+                            <div class="vet-image">
+                                <div class="vet-placeholder">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                            </div>
+                            <div class="vet-info">
+                                <h3>Dr. Mukesh Chaudhary</h3>
+                                <p class="specialty">Surgery & Orthopedics</p>
+                                <div class="vet-meta">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>4.8 (89 reviews)</span>
+                                    </div>
+                                    <div class="distance">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>3.7 miles away</span>
+                                    </div>
+                                </div>
+                                <div class="vet-actions">
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-calendar-plus"></i>
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="vet-card">
+                            <div class="vet-image">
+                                <div class="vet-placeholder">
+                                    <i class="fas fa-user-md"></i>
+                                </div>
+                            </div>
+                            <div class="vet-info">
+                                <h3>Dr. RK Singh</h3>
+                                <p class="specialty">Dental Care</p>
+                                <div class="vet-meta">
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>4.9 (156 reviews)</span>
+                                    </div>
+                                    <div class="distance">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>1.8 miles away</span>
+                                    </div>
+                                </div>
+                                <div class="vet-actions">
+                                    <button class="btn btn-primary">
+                                        <i class="fas fa-calendar-plus"></i>
+                                        Book Now
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick Access -->
+                <section class="quick-access">
+                    <h2>Quick Access</h2>
+                    <div class="quick-access-grid">
+                        <div class="quick-access-item">
+                            <div class="quick-icon">
+                                <i class="fas fa-location-arrow"></i>
+                            </div>
+                            <h4>Nearest Vets</h4>
+                            <p>Find closest veterinarians</p>
+                        </div>
+                        
+                        <div class="quick-access-item">
+                            <div class="quick-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4>My Favorites</h4>
+                            <p>Your saved veterinarians</p>
+                        </div>
+                        
+                        <div class="quick-access-item">
+                            <div class="quick-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h4>Appointments</h4>
+                            <p>Manage your bookings</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/vets.js"></script>
+</body>
+</html>
