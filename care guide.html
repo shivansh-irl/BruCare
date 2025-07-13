@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Guide - BruCare</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/care-guide.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1>🐾 BruCare</h1>
+        <div class="mobile-user-avatar">
+            <i class="fas fa-user"></i>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Navigation Placeholder -->
+        <div id="navigation-placeholder"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="greeting">
+                    <h1>📚 Pet Care Guide</h1>
+                    <p>Expert advice and tips for your pet's well-being</p>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                
+                <!-- Featured Articles -->
+                <div class="section">
+                    <h2>Popular Articles</h2>
+                    <div class="articles-grid">
+                        <div class="article-card">
+                            <div class="article-icon">🐕</div>
+                            <h3> <a href="pdf\Puppy-Training-Basics-Setting-Your-Puppy-Up-for-Success.pdf">Puppy Training Basics</a></h3>
+                            <p>Essential training tips for new puppies</p>
+                        </div>
+                        <div class="article-card">
+                            <div class="article-icon">🐱</div>
+                            <h3><a href="pdf\Decoding-Your-Cats-Health.pdf">Cat Health Signs</a></h3>
+                            <p>Understanding your cat's behavior</p>
+                        </div>
+                        <div class="article-card">
+                            <div class="article-icon">🥗</div>
+                            <h3><a href="pdf\The-Ultimate-Pet-Nutrition-Guide.pdf">Pet Nutrition Guide</a></h3>
+                            <p>Feeding your pet the right way</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+<div class="center-screen wrapper">
+             <!-- All Articles -->
+            <div class="section">
+                <h2><i class="fas fa-list"></i> All Articles & Guides</h2>
+                <div class="articles-grid" id="articlesGrid">
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=300&h=200&fit=crop" alt="Dog Nutrition">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="category nutrition">Nutrition</span>
+                                <span class="difficulty beginner">Beginner</span>
+                                <span class="read-time">6 min read</span>
+                            </div>
+                            <h3 href="https://n9.cl/bg3et" >The Ultimate Guide to Dog Nutrition: What Every Owner Should Know</h3>
+                            <p>Discover the essential nutrients your dog needs and how to choose the right food for their age, size, and activity level.</p>
+                            <div class="article-footer">
+                                <div class="author">
+                                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=30&h=30&fit=crop&crop=face" alt="Dr. RK Singh">
+                                    <span>Dr. RK Singh</span>
+                                </div>
+                                <div class="article-actions">
+                                    <button class="btn btn-sm btn-outline-secondary bookmark-btn">
+                                        <i class="fas fa-bookmark"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-secondary share-btn">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <span class="likes">❤️ 156</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=300&h=200&fit=crop" alt="Cat Grooming">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="category grooming">Grooming</span>
+                                <span class="difficulty intermediate">Intermediate</span>
+                                <span class="read-time">10 min read</span>
+                            </div>
+                            <h3>Professional Cat Grooming at Home: Step-by-Step Guide</h3>
+                            <p>Learn professional grooming techniques to keep your cat clean, healthy, and comfortable at home.</p>
+                            <div class="article-footer">
+                                <div class="author">
+                                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=30&h=30&fit=crop&crop=face" alt="Dr. Vineet Tripathi">
+                                    <span>Dr. Vineet Tripathi</span>
+                                </div>
+                                <div class="article-actions">
+                                    <button class="btn btn-sm btn-outline-secondary bookmark-btn">
+                                        <i class="fas fa-bookmark"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-secondary share-btn">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <span class="likes">❤️ 98</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1605568427561-40dd23c2acea?w=300&h=200&fit=crop" alt="Pet Safety">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="category safety">Safety</span>
+                                <span class="difficulty advanced">Advanced</span>
+                                <span class="read-time">15 min read</span>
+                            </div>
+                            <h3>Pet Emergency First Aid: Essential Skills Every Owner Needs</h3>
+                            <p>Master critical first aid techniques that could save your pet's life in emergency situations.</p>
+                            <div class="article-footer">
+                                <div class="author">
+                                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=30&h=30&fit=crop&crop=face" alt="Dr. Satyawati Jaiswal">
+                                    <span>Dr. Satyawati Jaiswal</span>
+                                </div>
+                                <div class="article-actions">
+                                    <button class="btn btn-sm btn-outline-secondary bookmark-btn">
+                                        <i class="fas fa-bookmark"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-secondary share-btn">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <span class="likes">❤️ 267</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=300&h=200&fit=crop" alt="Bird Care">
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="category lifestyle">Lifestyle</span>
+                                <span class="difficulty beginner">Beginner</span>
+                                <span class="read-time">8 min read</span>
+                            </div>
+                            <h3>Creating the Perfect Environment for Your Pet Bird</h3>
+                            <p>Design an enriching and safe habitat that promotes your bird's physical and mental well-being.</p>
+                            <div class="article-footer">
+                                <div class="author">
+                                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=30&h=30&fit=crop&crop=face" alt="Dr. Mukesh Chaudhary">
+                                    <span>Dr. Mukesh Chaudhary</span>
+                                </div>
+                                <div class="article-actions">
+                                    <button class="btn btn-sm btn-outline-secondary bookmark-btn">
+                                        <i class="fas fa-bookmark"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-secondary share-btn">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <span class="likes">❤️ 142</span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</div><div class="center-screen">
+
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No articles found</h3>
+                <p>Try adjusting your search criteria or browse our categories</p>
+                <button class="btn btn-primary">Clear Filters</button>
+            </div>
+
+             
+        </main>
+    </div>
+</div>
+    <!-- Notification Container -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/care-guide.js"></script>
+</body>
+</html>
