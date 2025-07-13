@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BruCare - Pet Management Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reminders.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <h1>🐾 BruCare</h1>
+
+    <div class="dashboard-container">
+        <!-- Navigation Component -->
+        <div id="navigation-placeholder"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="greeting">
+                    <h1>Welcome back! 👋</h1>
+                    <p>Let's take care of your furry friends today</p>
+                </div>
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img src="images/shivansh.jpg" alt="User Avatar">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Pet Profiles Section -->
+                <section class="pet-profiles">
+                    <h2>Your Pet Profiles</h2>
+                    <div class="pet-cards">
+                        <div class="pet-card">
+                            <div class="pet-illustration">
+                                <div class="pet-avatar">
+                    <img src="images/bruno.jpg" alt="Bruno" />
+                                </div>
+                            </div>
+                            <div class="pet-info">
+                                <h3>Bruno</h3>
+                                <p class="pet-details">Male · 4 years</p>
+                                <div class="pet-stats">
+                                    <span class="stat">🏥 Last checkup: 2 weeks ago</span>
+                                    <span class="stat">⚖️ Weight: 25 kg</span>
+                                </div>
+                            </div>
+                            <div class="pet-actions">
+                                <button class="btn-secondary">View Profile</button>
+                            </div>
+                        </div>
+                        
+                        <div class="add-pet-card">
+                            <div class="add-pet-content">
+                                <i class="fas fa-plus"></i>
+                                <p>Add New Pet</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Today's Reminders Section -->
+                <section class="reminders">
+                    <div class="section-header">
+                        <h2>Today's Reminders</h2>
+                        <a href="reminders.html" class="view-all-btn">
+                            <span>View All</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="reminder-list">
+                        <div class="reminder-item urgent">
+                            <div class="reminder-icon">
+                                <i class="fas fa-walking"></i>
+                            </div>
+                            <div class="reminder-content">
+                                <h4>Bruno's walk</h4>
+                                <p>Scheduled for 5:00 PM</p>
+                            </div>
+                            <div class="reminder-time">
+                                <span class="time-badge">In 2 hours</span>
+                            </div>
+                        </div>
+                        
+                        <div class="reminder-item">
+                            <div class="reminder-icon">
+                                <i class="fas fa-syringe"></i>
+                            </div>
+                            <div class="reminder-content">
+                                <h4>Vaccine booster due</h4>
+                                <p>Schedule appointment soon</p>
+                            </div>
+                            <div class="reminder-time">
+                                <span class="time-badge warning">In 3 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick Access Panel -->
+                <section class="quick-access">
+                    <h2>Quick Access</h2>
+                    <div class="quick-access-grid">
+                        <div class="quick-access-item">
+                            <div class="quick-icon">
+                                <i class="fas fa-tshirt"></i>
+                            </div>
+                            <h4>Clothing</h4>
+                            <p>Pet apparel & accessories</p>
+                        </div>
+                        
+                        <div class="quick-access-item">
+                            <div class="quick-icon">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                            <h4>Food</h4>
+                            <p>Nutrition & treats</p>
+                        </div>
+                        
+                        <div class="quick-access-item">
+                            <div class="quick-icon">
+                                <i class="fas fa-toy-brick"></i>
+                            </div>
+                            <h4>Accessories</h4>
+                            <p>Toys & essentials</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Background Decorative Elements -->
+    <div class="bg-decoration">
+        <div class="plant-1">🌿</div>
+        <div class="plant-2">🍃</div>
+        <div class="plant-3">🌱</div>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
