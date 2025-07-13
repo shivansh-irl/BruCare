@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminders - BruCare</title>
+    <link rel="stylesheet" href="css/reminders.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <h1>🐾 BruCare</h1>
+        <div class="mobile-user-avatar">
+            <i class="fas fa-user"></i>
+        </div>
+    </div>
+
+    <div class="dashboard-container">
+        <!-- Navigation Placeholder -->
+        <div id="navigation-placeholder"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="page-header">
+                <h1><i class="fas fa-bell"></i> Pet Reminders</h1>
+                <p>Never miss important appointments, medications, or care tasks for your pets</p>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock text-warning"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>5</h3>
+                        <p>Pending Today</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-pills text-primary"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>3</h3>
+                        <p>Medications</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check text-success"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>12</h3>
+                        <p>This Week</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-exclamation-triangle text-danger"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>2</h3>
+                        <p>Overdue</p>
+                    </div>
+                </div>
+            </div>
+<br><br>
+            <!-- Controls -->
+            <div class="reminders-controls">
+                <button class="btn btn-primary" id="addReminderBtn">
+                    <i class="fas fa-plus"></i> Add New Reminder
+                </button>
+
+                <br><br>
+                <div class="filter-controls">
+                    <select id="filterType" class="form-select">
+                        <option value="all">All Types</option>
+                        <option value="medication">💊 Medication</option>
+                        <option value="appointment">🏥 Appointments</option>
+                        <option value="grooming">✂️ Grooming</option>
+                        <option value="feeding">🍽️ Feeding</option>
+                        <option value="exercise">🏃 Exercise</option>
+                        <option value="vaccination">💉 Vaccination</option>
+                    </select>
+                    <select id="filterStatus" class="form-select">
+                        <option value="all">All Status</option>
+                        <option value="pending">⏳ Pending</option>
+                        <option value="completed">✅ Completed</option>
+                        <option value="overdue">⚠️ Overdue</option>
+                    </select>
+                    <select id="filterPet" class="form-select">
+                        <option value="all">All Pets</option>
+                        <option value="Bruno">🐕 Bruno</option>
+                        <option value="Luna">🐱  Luna</option>
+                        <option value="Max">🐕 Max/option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Today's Reminders -->
+            <div class="section">
+                <h2><i class="fas fa-calendar-day"></i> Today's Reminders</h2>
+                <div class="reminders-list" id="todayReminders">
+                    <div class="reminder-card urgent">
+                        <div class="reminder-icon">
+                            <i class="fas fa-pills"></i>
+                        </div>
+                        <div class="reminder-content">
+                            <h4>Bruno's Heart Medication</h4>
+                            <p class="reminder-time"><i class="fas fa-clock"></i> 8:00 AM</p>
+                            <p class="reminder-pet">🐕 Bruno</p>
+                        </div>
+                        <div class="reminder-actions">
+                            <button class="btn btn-sm btn-success"><i class="fas fa-check"></i></button>
+                            <button class="btn btn-sm btn-secondary"><i class="fas fa-clock"></i></button>
+                        </div>
+                    </div>
+                    <div class="reminder-card">
+                        <div class="reminder-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <div class="reminder-content">
+                            <h4>Luna's Grooming Appointment</h4>
+                            <p class="reminder-time"><i class="fas fa-clock"></i> 2:00 PM</p>
+                            <p class="reminder-pet">🐱 Luna</p>
+                        </div>
+                        <div class="reminder-actions">
+                            <button class="btn btn-sm btn-success"><i class="fas fa-check"></i></button>
+                            <button class="btn btn-sm btn-secondary"><i class="fas fa-edit"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Reminders -->
+            <div class="section">
+                <h2><i class="fas fa-calendar-alt"></i> Upcoming This Week</h2>
+                <div class="reminders-grid" id="upcomingReminders">
+                    <div class="reminder-card">
+                        <div class="reminder-date">
+                            <span class="day">15</span>
+                            <span class="month">Jul</span>
+                        </div>
+                        <div class="reminder-content">
+                            <h4>Max's Vet Checkup</h4>
+                            <p class="reminder-time"><i class="fas fa-clock"></i> 10:30 AM</p>
+                            <p class="reminder-type">🏥 Appointment</p>
+                        </div>
+                        <div class="reminder-actions">
+                            <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                        </div>
+                    </div>
+                    <div class="reminder-card">
+                        <div class="reminder-date">
+                            <span class="day">16</span>
+                            <span class="month">Jul</span>
+                        </div>
+                        <div class="reminder-content">
+                            <h4>Bruno's Flea Treatment</h4>
+                            <p class="reminder-time"><i class="fas fa-clock"></i> 6:00 PM</p>
+                            <p class="reminder-type">💊 Medication</p>
+                        </div>
+                        <div class="reminder-actions">
+                            <button class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add/Edit Reminder Modal -->
+            <div class="modal" id="reminderModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="modalTitle"><i class="fas fa-plus"></i> Add New Reminder</h3>
+                        <button class="close-btn" id="closeModal">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <form id="reminderForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reminderTitle">Reminder Title</label>
+                                <input type="text" id="reminderTitle" placeholder="e.g., Bruno's medication" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reminderType">Type</label>
+                                <select id="reminderType" required>
+                                    <option value="medication">💊 Medication</option>
+                                    <option value="appointment">🏥 Appointment</option>
+                                    <option value="grooming">✂️ Grooming</option>
+                                    <option value="feeding">🍽️ Feeding</option>
+                                    <option value="exercise">🏃 Exercise</option>
+                                    <option value="vaccination">💉 Vaccination</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reminderPet">Pet</label>
+                                <select id="reminderPet" required>
+                                    <option value="Bruno">🐕 Bruno</option>
+                                    <option value="luna">🐱 Luna</option>
+                                    <option value="max">🐕 Max</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="reminderPriority">Priority</label>
+                                <select id="reminderPriority">
+                                    <option value="low">🟢 Low</option>
+                                    <option value="medium" selected>🟡 Medium</option>
+                                    <option value="high">🔴 High</option>
+                                    <option value="urgent">🚨 Urgent</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="reminderDate">Date</label>
+                                <input type="date" id="reminderDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="reminderTime">Time</label>
+                                <input type="time" id="reminderTime" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reminderNotes">Notes & Instructions</label>
+                            <textarea id="reminderNotes" rows="3" placeholder="Additional details, dosage, location, etc."></textarea>
+                        </div>
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="reminderRecurring">
+                                <span class="checkmark"></span>
+                                Recurring reminder
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="reminderNotification" checked>
+                                <span class="checkmark"></span>
+                                Send notification
+                            </label>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Save Reminder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/reminders.js"></script>
+</body>
+</html>
